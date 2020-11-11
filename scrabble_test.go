@@ -13,6 +13,8 @@ func TestLettersHaveCorrectValues(t *testing.T) {
 		{input: []string{"L", "N", "R", "S", "T"}, want: 5},
 		//two value letters
 		{input: []string{"D", "G"}, want: 4},
+		//three value letters
+		{input: []string{"B", "C", "M", "P"}, want: 12},
 	}
 
 	for _, tc := range tests {

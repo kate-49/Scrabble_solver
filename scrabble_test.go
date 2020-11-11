@@ -5,8 +5,8 @@ import "testing"
 func TestScrabble(t *testing.T) {
 
 	t.Run("Test that letter A returns 1", func(t *testing.T) {
-		got := Run([]string{"A", "E". "I"})
-		want := 3
+		got := Run([]string{"A", "E", "I", "O", "U"})
+		want := 5
 
 		if got != want {
 			t.Errorf("got %d want %d", got, want)

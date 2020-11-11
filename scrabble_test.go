@@ -2,15 +2,20 @@ package scrabble
 
 import "testing"
 
-func TestScrabble(t *testing.T) {
+func TestLettersWithValue1(t *testing.T) {
+	tests := []struct {
+		input string
+		want  int
+	}{
+		{input: "A", want: 1},
+		{input: "E", want: 1},
+		{input: "I", want: 1},
+	}
 
-	t.Run("Test that letter A returns 1", func(t *testing.T) {
-		got := Run("A")
-		want := 1
-
-		if got != want {
-			t.Errorf("got %d want %d", got, want)
+	for _, tc := range tests {
+		got := Run(tc.input)
+		if tc.want != got {
+			t.Errorf("expected: %v, got: %v", tc.want, got)
 		}
-
-	})
+	}
 }

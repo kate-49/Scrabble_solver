@@ -1,5 +1,11 @@
 package scrabble
 
 func Run(letter string) int {
-	return 1
+	var sum int
+
+	if letter == "A" {
+		sum += 1
+	}
+
+	return sum
 }

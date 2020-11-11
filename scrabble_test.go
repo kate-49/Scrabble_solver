@@ -2,15 +2,17 @@ package scrabble
 
 import "testing"
 
-func TestLettersWithValue1IncludedNonValueLetters(t *testing.T) {
+func TestLettersHaveCorrectValues(t *testing.T) {
 	tests := []struct {
 		input []string
 		want  int
 	}{
+		{input: []string{}, want: 0},
+		//one value letters
 		{input: []string{"A", "E", "I", "O", "U"}, want: 5},
-		{input: []string{"A", "B", "C", "E", "I", "K", "O", "X"}, want: 4},
 		{input: []string{"L", "N", "R", "S", "T"}, want: 5},
-		{input: []string{"N", "E", "U", "X"}, want: 3},
+		//two value letters
+		{input: []string{"D", "G"}, want: 4},
 	}
 
 	for _, tc := range tests {

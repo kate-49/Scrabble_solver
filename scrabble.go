@@ -5,10 +5,6 @@ import "strings"
 func Run(inputLetters string) int {
 	var sum int
 
-	type Letters struct {
-		Let string
-	}
-
 	type ScrabbleLetters struct {
 		LetterValue []string
 	}

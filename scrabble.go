@@ -1,5 +1,7 @@
 package scrabble
 
+import "strings"
+
 func Run(inputLetters []string) int {
 	var sum int
 
@@ -13,37 +15,37 @@ func Run(inputLetters []string) int {
 
 	for _, letter := range inputLetters {
 		for _, oneValueLetter := range OneValueLetters {
-			if letter == oneValueLetter {
+			if strings.ToUpper(letter) == oneValueLetter {
 				sum++
 			}
 		}
 		for _, TwoValueLetter := range TwoValueLetters {
-			if letter == TwoValueLetter {
+			if strings.ToUpper(letter) == TwoValueLetter {
 				sum += 2
 			}
 		}
 		for _, ThreeValueLetter := range ThreeValueLetters {
-			if letter == ThreeValueLetter {
+			if strings.ToUpper(letter) == ThreeValueLetter {
 				sum += 3
 			}
 		}
 		for _, FourValueLetter := range FourValueLetters {
-			if letter == FourValueLetter {
+			if strings.ToUpper(letter) == FourValueLetter {
 				sum += 4
 			}
 		}
 		for _, FiveValueLetter := range FiveValueLetters {
-			if letter == FiveValueLetter {
+			if strings.ToUpper(letter) == FiveValueLetter {
 				sum += 5
 			}
 		}
 		for _, EightValueLetter := range EightValueLetters {
-			if letter == EightValueLetter {
+			if strings.ToUpper(letter) == EightValueLetter {
 				sum += 8
 			}
 		}
 		for _, TenValueLetter := range TenValueLetters {
-			if letter == TenValueLetter {
+			if strings.ToUpper(letter) == TenValueLetter {
 				sum += 10
 			}
 		}

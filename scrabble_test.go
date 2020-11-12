@@ -7,22 +7,12 @@ func TestLettersHaveCorrectValues(t *testing.T) {
 		input []string
 		want  int
 	}{
-		{input: []string{}, want: 0},
-		//one value letters
-		{input: []string{"A", "E", "I", "O", "U"}, want: 5},
-		{input: []string{"L", "N", "R", "S", "T"}, want: 5},
-		//two value letters
-		{input: []string{"D", "G"}, want: 4},
-		//three value letters
-		{input: []string{"B", "C", "M", "P"}, want: 12},
-		//four point letters
-		{input: []string{"F", "H", "V", "W", "Y"}, want: 20},
-		//five point letters
-		{input: []string{"K"}, want: 5},
-		//eight point letters
-		{input: []string{"J", "X"}, want: 16},
-		//ten point letters
-		{input: []string{"Q", "Z"}, want: 20},
+		// acceptance criteria tests
+		{input: []string{"c", "a", "b", "b", "a", "g", "e"}, want: 14},
+		{input: []string{""}, want: 0},
+		{input: []string{"a"}, want: 1},
+		// {input: []string{"C", "A", "B", "B", "A", "G", "E"}, want: 14},
+		// {input: []string{"C", "A", "B", "B", "A", "G", "E"}, want: 14},
 	}
 
 	for _, tc := range tests {

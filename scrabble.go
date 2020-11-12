@@ -7,6 +7,8 @@ func Run(inputLetters []string) int {
 	TwoValueLetters := [2]string{"D", "G"}
 	ThreeValueLetters := [4]string{"B", "C", "M", "P"}
 	FourValueLetters := [5]string{"F", "H", "V", "W", "Y"}
+	FiveValueLetters := [1]string{"K"}
+	EightValueLetters := [2]string{"J", "X"}
 
 	for _, letter := range inputLetters {
 		for _, oneValueLetter := range OneValueLetters {
@@ -27,6 +29,16 @@ func Run(inputLetters []string) int {
 		for _, FourValueLetter := range FourValueLetters {
 			if letter == FourValueLetter {
 				sum += 4
+			}
+		}
+		for _, FiveValueLetter := range FiveValueLetters {
+			if letter == FiveValueLetter {
+				sum += 5
+			}
+		}
+		for _, EightValueLetter := range EightValueLetters {
+			if letter == EightValueLetter {
+				sum += 8
 			}
 		}
 	}

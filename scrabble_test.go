@@ -21,6 +21,8 @@ func TestLettersHaveCorrectValues(t *testing.T) {
 		{input: []string{"K"}, want: 5},
 		//eight point letters
 		{input: []string{"J", "X"}, want: 16},
+		//ten point letters
+		{input: []string{"Q", "Z"}, want: 20},
 	}
 
 	for _, tc := range tests {

@@ -2,7 +2,7 @@ package scrabble
 
 import "strings"
 
-func Run(inputLetters []string) int {
+func Run(inputLetters string) int {
 	var sum int
 
 	OneValueLetters := [10]string{"A", "E", "I", "O", "U", "L", "N", "R", "S", "T"}
@@ -13,7 +13,10 @@ func Run(inputLetters []string) int {
 	EightValueLetters := [2]string{"J", "X"}
 	TenValueLetters := [2]string{"Q", "Z"}
 
-	for _, letter := range inputLetters {
+	arrayLength := len(inputLetters)
+	inputLettersArray := strings.SplitAfterN(inputLetters, "", arrayLength)
+
+	for _, letter := range inputLettersArray {
 		for _, oneValueLetter := range OneValueLetters {
 			if strings.ToUpper(letter) == oneValueLetter {
 				sum++

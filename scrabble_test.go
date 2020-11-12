@@ -11,8 +11,10 @@ func TestLettersHaveCorrectValues(t *testing.T) {
 		{input: []string{"c", "a", "b", "b", "a", "g", "e"}, want: 14},
 		{input: []string{""}, want: 0},
 		{input: []string{"a"}, want: 1},
-		// {input: []string{"C", "A", "B", "B", "A", "G", "E"}, want: 14},
-		// {input: []string{"C", "A", "B", "B", "A", "G", "E"}, want: 14},
+		{input: []string{"f"}, want: 4},
+		{input: []string{"s", "t", "r", "e", "e", "t"}, want: 6},
+		{input: []string{"q", "u", "i", "r", "k", "y"}, want: 22},
+		{input: []string{"O", "X", "Y", "P", "H", "E", "N", "B", "U", "T", "A", "Z", "O", "N", "E"}, want: 41},
 	}
 
 	for _, tc := range tests {
